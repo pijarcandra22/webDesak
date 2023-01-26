@@ -27,41 +27,63 @@
       <div id="landing"></div>
       <div id="form_input_data">
         <h1 style="font-family: Yanone Kaffeesatz; text-align:center">Prediksi Performa Siswa Mata Pelajaran Matematika</h1>
-        <form action="">
+        <form action="" id="dataSubmit">
           <h4 style="font-family: Yanone Kaffeesatz;">Identitas Siswa</h4>
-          <input type="text" class="form-control" placeholder="Nama Siswa">
-          <input type="number" class="form-control" placeholder="Umur">
-          <select class="form-select">
+          <input name="nama" type="text" class="form-control" placeholder="Nama Siswa">
+          <input name="age" type="number" class="form-control" placeholder="Umur">
+          <select name="sex" class="form-select">
             <option selected>Jenis Kelamin</option>
             <option value="F">Female</option>
             <option value="M">Male</option>
           </select>
 
-          <h4 style="font-family: Yanone Kaffeesatz;"> Orang Tua</h4>
-          <input type="text" class="form-control" placeholder="Jumlah Kegagalan">
-          <input type="text" class="form-control" placeholder="Jumlah Absensi Sekolah">
-          <input type="text" class="form-control" placeholder="Nilai Periode Pertama">
-          <input type="text" class="form-control" placeholder="Nilai Periode Kedua">
+          <h4 style="font-family: Yanone Kaffeesatz;">Kemampuan Siswa</h4>
+          <input name="failures" type="text" class="form-control" placeholder="Jumlah Kegagalan">
+          <input name="absences" type="text" class="form-control" placeholder="Jumlah Absensi Sekolah">
+          <input name="G1" type="text" class="form-control" placeholder="Nilai Periode Pertama">
+          <input name="G2" type="text" class="form-control" placeholder="Nilai Periode Kedua">
+          <select name="studytime" class="form-select">
+            <option selected>Waktu Belajar</option>
+            <option value="1">< 2 Jam</option>
+            <option value="2">2 - 5 Jam</option>
+            <option value="3">5 - 10 Jam</option>
+            <option value="4">> 10 Jam</option>
+          </select>
+          <select name="higher" class="form-select">
+            <option selected>Ingin Pendidikan Lebih Tinggi</option>
+            <option value="yes">Ingin</option>
+            <option value="no">Tidak</option>
+          </select>
+          <select name="health" class="form-select">
+            <option selected>Kondisi Kesehatan Saat Ini</option>
+            <option value="1">Sangat Buruk</option>
+            <option value="2">Buruk</option>
+            <option value="3">Cukup</option>
+            <option value="4">Baik</option>
+            <option value="5">Sangat Baik</option>
+          </select>
 
-          <select class="form-select">
+
+          <h4 style="font-family: Yanone Kaffeesatz;">Kondisi Keluarga dan Lingkungan</h4>
+          <select name="address" class="form-select">
             <option selected>Kawasan Tempat Tinggal</option>
             <option value="U">Perkotaan</option>
             <option value="R">Pedesaan</option>
           </select>
           
-          <select class="form-select">
+          <select name="famsize" class="form-select">
             <option selected>Jumlah Anggota Keluarga</option>
             <option value="GT3">Lebih dari 3</option>
             <option value="LE3">Kurang atau sama dengan 3</option>
           </select>
 
-          <select class="form-select">
+          <select name="Pstatus" class="form-select">
             <option selected>Status Pernikahan Orang Tua</option>
             <option value="T">Menikah</option>
             <option value="A">Berpisah</option>
           </select>
 
-          <select class="form-select">
+          <select name="Medu" class="form-select">
             <option selected>Pendidikan Terakhir Ibu</option>
             <option value="4">Jenjang Lebih Tinggi</option>
             <option value="3">SMA</option>
@@ -70,7 +92,7 @@
             <option value="0">Tidak Sekolah</option>
           </select>
 
-          <select class="form-select">
+          <select name="Fedu" class="form-select">
             <option selected>Pendidikan Terakhir Ayah</option>
             <option value="4">Jenjang Lebih Tinggi</option>
             <option value="3">SMA</option>
@@ -79,7 +101,7 @@
             <option value="0">Tidak Sekolah</option>
           </select>
 
-          <select class="form-select">
+          <select name="Mjob" class="form-select">
             <option selected>Pekerjaan Ibu</option>
             <option value="health">Kesehatan</option>
             <option value="teacher">Pengajar</option>
@@ -88,7 +110,7 @@
             <option value="other">Other</option>
           </select>
 
-          <select class="form-select">
+          <select name="Fjob" class="form-select">
             <option selected>Pekerjaan Ayah</option>
             <option value="health">Kesehatan</option>
             <option value="teacher">Pengajar</option>
@@ -97,14 +119,14 @@
             <option value="other">Other</option>
           </select>
 
-          <select class="form-select">
+          <select name="guardian" class="form-select">
             <option selected>Orang Terdekat Anak</option>
             <option value="mother">Ibu</option>
             <option value="father">Ayah</option>
             <option value="other">Other</option>
           </select>
 
-          <select class="form-select">
+          <select name="traveltime" class="form-select">
             <option selected>Waktu Tempuh ke Sekolah</option>
             <option value="1">< 15 Menit</option>
             <option value="2">15 - 30 Menit</option>
@@ -112,57 +134,37 @@
             <option value="4">> 60 Menit</option>
           </select>
 
-          <select class="form-select">
-            <option selected>Waktu Belajar</option>
-            <option value="1">< 2 Jam</option>
-            <option value="2">2 - 5 Jam</option>
-            <option value="3">5 - 10 Jam</option>
-            <option value="4">> 10 Jam</option>
-          </select>
-
-          <select class="form-select">
-            <option selected>Status Pernikahan Orang Tua</option>
-            <option value="T">Menikah</option>
-            <option value="A">Berpisah</option>
-          </select>
-
-          <select class="form-select">
+          <select name="schoolsup" class="form-select">
             <option selected>Pendidikan Tambahan (jam tambahan, kursus)</option>
             <option value="yes">Dapat</option>
             <option value="no">Tidak Dapat</option>
           </select>
 
-          <select class="form-select">
+          <select name="famsup" class="form-select">
             <option selected>Dukungan Pedidikan dari Orang Tua</option>
             <option value="yes">Dapat</option>
             <option value="no">Tidak Dapat</option>
           </select>
 
-          <select class="form-select">
+          <select name="paid" class="form-select">
             <option selected>Mengikuti Les/Kursus</option>
             <option value="yes">Ikut</option>
             <option value="no">Tidak Ikut</option>
           </select>
 
-          <select class="form-select">
+          <select name="nursery" class="form-select">
             <option selected>Pendidikan Pra-sekolah</option>
             <option value="yes">Ikut</option>
             <option value="no">Tidak Ikut</option>
           </select>
 
-          <select class="form-select">
-            <option selected>Ingin Pendidikan Lebih Tinggi</option>
-            <option value="yes">Ingin</option>
-            <option value="no">Tidak</option>
-          </select>
-
-          <select class="form-select">
+          <select name="internet" class="form-select">
             <option selected>Akses Internet</option>
             <option value="yes">Memiliki</option>
             <option value="no">Tidak</option>
           </select>
 
-          <select class="form-select">
+          <select name="romantic" class="form-select">
             <option selected>Sedang Menjalin Hubungan Romantis</option>
             <option value="yes">Iya</option>
             <option value="no">Tidak</option>
@@ -213,19 +215,27 @@
             <option value="5">Sangat Banyak</option>
           </select>
 
-          <select class="form-select">
-            <option selected>Kondisi Kesehatan Saat Ini</option>
-            <option value="1">Sangat Buruk</option>
-            <option value="2">Buruk</option>
-            <option value="3">Cukup</option>
-            <option value="4">Baik</option>
-            <option value="5">Sangat Baik</option>
-          </select>
-
-
+          <button class="btn btn-secondary" id="submitData">SUBMIT</button>
         </form>
       </div>
 
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </html>
+<script>
+$( document ).ready(function() {
+  $('#submitData').click(function() {
+    alert($("#dataSubmit").serialize())
+    $.ajax({
+        type: "POST",
+        data: $("#dataSubmit").serialize(),
+        url: "/",
+        success: function(data)
+        {   
+        }
+    });
+  })
+})
+</script>
