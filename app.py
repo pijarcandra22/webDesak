@@ -15,7 +15,7 @@ def index():
 @app.route('/cbr',methods=['POST'])
 def cbr():
   data = request.form.to_dict(flat=False)
-
+  nama = data['nama']
   data['G2'] = [int(x) for x in data['G2']]
   data['G1'] = [int(x) for x in data['G1']]
   data['Medu'] = [int(x) for x in data['Medu']]
@@ -26,7 +26,7 @@ def cbr():
   data = data.loc[:,list(df.iloc[:,:-1].columns)]
   print(data.head())
   pred,ket = cb.run(data)
-  return jsonify(str(pred)+"_"+ket)
+  return jsonify(str(pred)+"_"+ket+"_"+nama)
 
 if __name__=='__main__':
   app.run()
